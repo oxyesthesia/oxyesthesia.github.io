@@ -19,7 +19,7 @@ form.addEventListener("submit", function(event) {
 function displayFilm(film) {
   let item = document.createElement("li");
   item.setAttribute("data-id", film.id);
-  item.innerHTML =`<p><strong>${film.name}</strong><br>${film.genre}<br>${film.rating}<br>${film.length}<br>${film.release}<br>${film.score}<br>${film.watch}</p>`;
+  item.innerHTML =`<p><strong>${film.name}</strong><br>${film.genre}<br><img class="classification" src=${film.rating}><br>${film.length}<br>${film.release}<br>${film.score}<br>${film.watch}</p>`;
   filmlist.appendChild(item);
   form.reset();
   // Setup delete button DOM elements
@@ -80,6 +80,3 @@ function addFilm(name, genre, rating, length, release, score, watch) {
 }
 
 addFilm("Kill Bill", "Action", "M", 108, 2012, 4, "12/4/24");
-// localStorage.setItem('filmList', JSON.stringify(filmList));
-// console.log(filmList);
-// updateList();
