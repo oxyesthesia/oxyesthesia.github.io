@@ -6,27 +6,32 @@
   <meta name="viewport" content="width=device-width">
   <title>My Movie Database</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geologica&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <div class="header">
-    <h1>My Movie Database</h1>
+    <h1 class="geologica-bold">My Movie Database</h1>
     <button class="addFilm" onclick="openForm()">Add a Film</button>
   </div>
   <div class="container">
     <div class="form_entry">
-      <form id="filmform">
+      <div class="translucent" id="translucent">
+      </div>
+      <form id="filmform" class="form">
         <div class="'form-row">
           <label for="filmName">Name</label>
-          <input type="text" name="filmName" id="filmName" required="true">
+          <input class="data-entry" type="text" name="filmName" id="filmName" required="true">
         </div>
         <div class="'form-row">
           <label for="filmGenre">Genre</label>
-          <input type="text" name="filmGenre" id="filmGenre" required="true">
+          <input class="data-entry" type="text" name="filmGenre" id="filmGenre" required="true">
         </div>
         <div class="'form-row">
           <label for="filmRating">Rating</label>
-          <input list="rating" name="filmRating" id="filmRating" required="true">
+          <input class="data-entry" list="rating" name="filmRating" id="filmRating" required="true">
           <datalist id="rating">
               <option value="E">
               <option value="G">
@@ -39,33 +44,33 @@
         </div>
         <div class="'form-row">
           <label for="filmLength">Length</label>
-          <input type="number" name="filmLength" id="filmLength" required="true">
+          <input class="data-entry" type="number" name="filmLength" id="filmLength" required="true">
         </div>
         <div class="'form-row">
           <label for="filmRelease">Release</label>
-          <input type="number" name="filmRelease" id="filmRelease" required="true">
+          <input class="data-entry" type="number" name="filmRelease" id="filmRelease" required="true">
         </div>
         <div class="'form-row">
           <label for="filmScore">Score</label>
-          <input type="number" name="filmScore" id="filmScore" required="true">
+          <input class="data-entry" type="number" name="filmScore" id="filmScore" required="true">
         </div>
         <div class="'form-row">
           <label for="filmWatch">Watched</label>
-          <input type="text" name="filmWatch" id="filmWatch" required="true">
+          <input class="data-entry" type="text" name="filmWatch" id="filmWatch" required="true">
         </div>
         <div class="form-row">
-          <input type="submit">
+          <input class="geologica-bold" type="submit">
         </div>
         <div class="form-row">
-          <button class="close" onClick="closeForm()">Close</button>
+          <button id="close" class="geologica-bold" onClick="closeForm()">Close</button>
         </div>
       </form>
     </div>
     <div class="data_display">
-      <h2>Facts</h2>
+      <h2 class="geologica-bold">Facts</h2>
     </div>
     <div class="data_list">
-      <h2>My Films</h2>
+      <h2 class="geologica-bold">My Films</h2>
         <ul id="filmlist">
       </ul>
     </div>

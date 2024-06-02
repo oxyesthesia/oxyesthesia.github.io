@@ -1,15 +1,57 @@
 html {
   height: 100%;
   width: 100%;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Geologica", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0,
+    "SHRP" 0;
 }
-                
+
+.geologica-bold {
+  font-family: "Geologica", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0,
+    "SHRP" 0;
+}
+
+/* https://fonts.google.com/specimen/Geologica */
+
 .header {
   text-align: center;
 }
 
 * {
   box-sizing: border-box;
+}
+
+.addFilm {
+  font-size: 15px;
+  height: 40px;
+  flex-grow: 1;
+  background-color: rgb(247, 222, 0);
+  border: none;
+  border-radius: 4px;
+  font-family: "Geologica", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0,
+    "SHRP" 0;
+}
+
+.addFilm:hover {
+  background-color: rgb(247, 189, 0);
+  font-size: 18px;
 }
 
 .classification {
@@ -33,36 +75,85 @@ html {
   padding: 20px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .container {
     flex-direction: column;
   }
 }
-                
+      
+.translucent {
+  display: none;
+  background-color: rgba(87, 87, 84, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 form {
   display: none;
+  transform: translate(-50%, -50%);
   position: fixed;
-  max-width: 500px;
   z-index: 10;
   top: 50%;
   left: 50%;
   margin: 0 auto;
   border: 2px solid grey;
   background-color: white;
-  padding: 2em 1em;
+  padding: 2em 2em;
 }
                 
 .form-row {
   display: flex;
   justify-content: flex-end;
-  padding: .5em;
+  padding: .7em;
 }
                 
-.form-row > label {
+label {
   width: 100px;
+  float: left;
+  text-align: left;
 }
-                
+
+.data-entry {
+  float: left;
+  padding: 4px 4px;
+  margin-bottom: 15px;
+  border: 1px solid black;
+  border-radius: 4px;
+  font-family: "Geologica", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0,
+    "SHRP" 0;
+}
+
 .form-row > input {
-  padding: .5em;
+  font-size: 15px;
+  height: 40px;
   flex-grow: 1;
+  background-color: rgb(106, 197, 106);
+  border: none;
+}
+
+.form-row > input:hover {
+  background-color: rgb(60, 221, 60);
+  font-size: 18px;
+}
+
+#close {
+  font-size: 15px;
+  height: 40px;
+  flex-grow: 1;
+  background-color: rgb(206, 117, 117);
+  border: none;
+}
+
+#close:hover {
+  background-color: rgb(221, 50, 50);
+  font-size: 18px;
 }

@@ -3,10 +3,12 @@ const filmlist = document.getElementById("filmlist");
 
 function openForm() {
   document.getElementById('filmform').style.display = "block";
+  document.getElementById('translucent').style.display = "block";
 }
 
 function closeForm() {
   document.getElementById('filmform').style.display = "none";
+  document.getElementById('translucent').style.display = "none";
 }
 
 form.addEventListener("submit", function(event) {
