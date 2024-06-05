@@ -27,7 +27,20 @@
         </div>
         <div class="'form-row">
           <label for="filmGenre">Genre</label>
-          <input class="data-entry" type="text" name="filmGenre" id="filmGenre" required="true">
+          <input class="data-entry" list="genre" name="filmGenre" id="filmGenre" required="true">
+          <datalist id="genre">
+            <option value="Action">
+            <option value="Adventure">
+            <option value="Comedy">
+            <option value="Drama">
+            <option value="Fantasy">
+            <option value="Historical">
+            <option value="Horror">
+            <option value="Musical">
+            <option value="Romance">
+            <option value="Sci-Fi">
+            <option value="Thriller">
+        </datalist>
         </div>
         <div class="'form-row">
           <label for="filmRating">Rating</label>
@@ -68,16 +81,20 @@
     </div>
     <div class="data_display">
       <h2 class="geologica-bold">Facts</h2>
+      <div class="facts">
+        <ul id="factlist">
+        </ul>
+      </div>
     </div>
     <div class="data_list">
       <h2 class="geologica-bold">My Films</h2>
+      <div class="data_master">
         <ul id="filmlist">
-      </ul>
+        </ul>
+      </div>
     </div>
   </div>
-
   <script src="script.js"></script>
   </script>
 </body>
-
 </html>
