@@ -14,7 +14,7 @@
 <body>
   <div class="header">
     <h1 class="geologica-bold">My Movie Database</h1>
-    <button class="addFilm" onclick="openForm()">Add a Film</button>
+    <button class="addFilm" onclick="openForm()">ADD A FILM</button>
   </div>
   <div class="container">
     <div class="form_entry">
@@ -75,24 +75,39 @@
           <input class="geologica-bold" type="submit">
         </div>
         <div class="form-row">
-          <button id="close" class="geologica-bold" onClick="closeForm()">Close</button>
+          <button id="close" type="button" class="geologica-bold" onClick="closeForm()">Close</button>
         </div>
       </form>
     </div>
-    <div class="data_display">
-      <h2 class="geologica-bold">Facts</h2>
+    <div class="data_display" id="data_display">
+      <h2 class="geologica-bold">Film Catalogue Facts</h2>
       <div class="facts">
         <ul id="factlist">
         </ul>
       </div>
     </div>
     <div class="data_list">
-      <h2 class="geologica-bold">My Films</h2>
-      <div class="data_master">
+      <div class="datalist_header">
+        <h2 class="geologica-bold">My Film List</h2>
+        <div class="sorting_buttons">
+          <h4 class="geologica-bold">Sort By:</h4>
+          <button class="sort" id="name" onclick="sort(this.id)">Name</button>
+          <button class="sort" id="score" onclick="sort(this.id)">Score</button>
+          <button class="sort" id="release" onclick="sort(this.id)">Release Year</button>
+          <button class="sort" id="genre" onclick="sort(this.id)">Genre</button>
+          <button class="sort" id="rating" onclick="sort(this.id)">Rating</button>
+          <button class="sort" id="date" onclick="sort(this.id)">Entry Date</button>
+        </div>
+      </div>
+      <div id='data_master' class="data_master">
         <ul id="filmlist">
         </ul>
       </div>
     </div>
+  </div>
+  <div class="extraButtons">
+    <button id="fillList" class="extras" onclick="fillList()">Fill List!</button>
+    <button id="deleteList" class="extras" onclick="deleteList()">Delete List!</button>
   </div>
   <script src="script.js"></script>
   </script>

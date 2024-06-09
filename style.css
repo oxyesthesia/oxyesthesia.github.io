@@ -41,6 +41,16 @@ h3 {
   margin-bottom: -15px;
 }
 
+h4 {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
 .addFilm {
   transform: translate(0, -50%);
   font-size: 30px;
@@ -52,7 +62,7 @@ h3 {
   border-radius: 4px;
   font-family: "Geologica", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
   font-variation-settings:
     "slnt" 0,
@@ -75,6 +85,7 @@ h3 {
 .container {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .data_display {
@@ -83,7 +94,11 @@ h3 {
   padding: 20px;
   border-radius: 20px;
   margin: 1%;
-  max-height: 500px;
+  overflow: auto;
+  height: auto;
+  position: sticky;
+  z-index: 5;
+  top: 30px;
 }
 
 .data_list {
@@ -94,10 +109,44 @@ h3 {
   margin: 1%;
 }
 
-/* .data_master {
+.datalist_header {
   display: flex;
   justify-content: space-between;
-} */
+  flex-wrap: wrap;
+}
+
+.sorting_buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sort {
+  font-size: 14px;
+  width: 100px;
+  height: 30px;
+  margin: 10px;
+  margin-top: 15px;
+  font-family: "Geologica", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0,
+    "SHRP" 0;
+  background-color: rgb(114, 65, 0);
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.sort:hover {
+  background-color: rgb(88, 32, 0);
+}
+
+.sort:active {
+  background-color: rgb(46, 17, 0);
+}
 
 ul {
   list-style-type: none;
@@ -141,8 +190,27 @@ li {
   transition: 0.3s;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1400px) {
   .container {
+    flex-direction: column;
+  }
+  .data_display {
+    position: static;
+  }
+
+  #fillList, #deleteList {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .datalist_header {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sorting_buttons {
     flex-direction: column;
   }
 }
@@ -151,16 +219,18 @@ li {
   display: none;
   background-color: rgba(87, 87, 84, 0.7);
   position: absolute;
+  z-index: 8;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 1000%;
 }
 
 form {
   display: none;
   transform: translate(-50%, -50%);
   position: fixed;
+  min-width: 332px;
   z-index: 10;
   top: 50%;
   left: 50%;
@@ -222,4 +292,37 @@ label {
 #close:hover {
   background-color: rgb(221, 50, 50);
   font-size: 18px;
+}
+
+.extraButtons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.extras {
+  font-size: 15px;
+  height: 40px;
+  max-width: 100px;
+  margin: 10px;
+  flex-grow: 1;
+  background-color: rgb(211, 197, 183);
+  border: none;
+  border-radius: 4px;
+  position: sticky;
+  bottom: 20px;
+  left: 20px;
+  display: block;
+  font-family: "Geologica", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0,
+    "SHRP" 0;
+}
+
+.extras:hover {
+  background-color: rgb(202, 184, 166);
 }
