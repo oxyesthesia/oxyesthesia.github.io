@@ -12,14 +12,18 @@
 </head>
 
 <body>
+  <!-- Header is where I'm storing the title and the 'Add A Film' button, so that they don't get affected by the flexboxing of the main content -->
   <div class="header">
     <h1 class="geologica-bold">My Movie Database</h1>
     <button class="addFilm" onclick="openForm()">ADD A FILM</button>
   </div>
+  <!-- This container stores the rest of the page (minus the dev buttons at the bottom). The container has properties to allow for dynamic screen size changes and scaling properties -->
   <div class="container">
     <div class="form_entry">
+      <!-- 'translucent' is the grey wall that appears behind the 'Add A Film' form, bringing focused attention onto the form itself -->
       <div class="translucent" id="translucent">
       </div>
+      <!-- 'form' is the form itself. It's a fairly simple form, no fancy bells or whistles added to it. -->
       <form id="filmform" class="form">
         <div class="'form-row">
           <label for="filmName">Name</label>
@@ -79,6 +83,7 @@
         </div>
       </form>
     </div>
+    <!-- 'data_display' is the element on the left, where the fun facts about your films display. This will dynamically shift to the top of the page if on a mobile device, but on a desktop view it is a sticky element -->
     <div class="data_display" id="data_display">
       <h2 class="geologica-bold">Film Catalogue Facts</h2>
       <div class="facts">
@@ -86,9 +91,11 @@
         </ul>
       </div>
     </div>
+    <!-- 'data_list' is the list of films in the storage/added. This view is scrollable and set up with flexbox to change columns based on screen size. -->
     <div class="data_list">
       <div class="datalist_header">
         <h2 class="geologica-bold">My Film List</h2>
+        <!-- 'sorting_buttons' are the buttons at the top of the list, categorising the array order by a variety of options -->
         <div class="sorting_buttons">
           <h4 class="geologica-bold">Sort By:</h4>
           <button class="sort" id="name" onclick="sort(this.id)">Name</button>
@@ -105,6 +112,7 @@
       </div>
     </div>
   </div>
+  <!-- 'extraButtons' are purely for the ease of the marker for this assignment, I don't intend on these being a part of the 'final full-fledged prototype', they're just here for you to experiment with the website. -->
   <div class="extraButtons">
     <button id="fillList" class="extras" onclick="fillList()">Fill List!</button>
     <button id="deleteList" class="extras" onclick="deleteList()">Delete List!</button>
