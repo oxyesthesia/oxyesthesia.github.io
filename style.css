@@ -12,6 +12,7 @@ html {
     "SHRP" 0;
 }
 
+/* Any item that has this as a class will inherit the bold version of the page-wide typeface (font-weight: 600) */
 .geologica-bold {
   font-family: "Geologica", sans-serif;
   font-optical-sizing: auto;
@@ -33,6 +34,7 @@ html {
   box-sizing: border-box;
 }
 
+/* I used the h#'s as generic titles that I could format. h2 is used in the individual data entries and doesn't require formatting, hence its exclusion */
 h1 {
   font-size: 60px;
 }
@@ -46,11 +48,13 @@ h4 {
   margin-top: 20px;
 }
 
+/* When the form to enter new films is open, the page will prevent scrolling to place focus on the form itself. This will deactivate when the form is submitted or closed. */
 .stop-scrolling {
   height: 100%;
   overflow: hidden;
 }
 
+/* The orange 'Add A Film' button at the top of the page. */
 .addFilm {
   transform: translate(0, -50%);
   font-size: 30px;
@@ -78,16 +82,19 @@ h4 {
   margin: 5px;
 }
 
+/* Defining the maximum size of each of the classification pictures (G, PG, M, etc.) */
 .classification {
   max-width: 75px;
 }
 
+/* The 'container' incorporates everything on the page except for the title, the 'Add A Film' button and the dev buttons at the bottom of the page */
 .container {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
 }
 
+/* The left-hand box containing the fun facts */
 .data_display {
   flex: 27%;
   background-color: rgb(233, 187, 141);
@@ -101,6 +108,7 @@ h4 {
   top: 30px;
 }
 
+/* The right-hand box containing the individual film entries */
 .data_list {
   flex: 67%;
   background-color: rgb(233, 187, 141);
@@ -109,17 +117,20 @@ h4 {
   margin: 1%;
 }
 
+/* The header of the datalist, including the sorting buttons */
 .datalist_header {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
+/* The div containing the six sorting buttons */
 .sorting_buttons {
   display: flex;
   justify-content: space-between;
 }
 
+/* The individual sorting buttons themselves */
 .sort {
   font-size: 14px;
   width: 100px;
@@ -148,6 +159,7 @@ h4 {
   background-color: rgb(46, 17, 0);
 }
 
+/* The list of movie entries itself, to which the displayFilm() function writes directly into */
 ul {
   list-style-type: none;
   display: flex;
@@ -167,6 +179,7 @@ li {
   align-items: stretch;
 }
 
+/* The delete button located at the bottom of each film entry box */
 #delete {
   font-size: 15px;
   font-family: "Geologica", sans-serif;
@@ -190,6 +203,7 @@ li {
   transition: 0.3s;
 }
 
+/* Dynamic screen size constraints, this one dictating the facts box appearing on top of the list box, as opposed to side-by-side */
 @media (max-width: 1400px) {
   .container {
     flex-direction: column;
@@ -203,6 +217,7 @@ li {
   }
 }
 
+/* Keeping the sorting buttons from aligning in weird ways, they are vertically ordered when the screen size cannot display them horizontal anymore */
 @media (max-width: 1200px) {
   .datalist_header {
     text-align: center;
@@ -214,7 +229,8 @@ li {
     flex-direction: column;
   }
 }
-      
+
+/* The grey background that appears when the form is open */
 .translucent {
   display: none;
   background-color: rgba(87, 87, 84, 0.7);
@@ -226,6 +242,7 @@ li {
   height: 1000%;
 }
 
+/* The form itself */
 form {
   display: none;
   transform: translate(-50%, -50%);
@@ -239,7 +256,8 @@ form {
   background-color: white;
   padding: 2em 2em;
 }
-                
+
+/* Each individual row of the form */
 .form-row {
   display: flex;
   justify-content: flex-end;
@@ -252,6 +270,7 @@ label {
   text-align: left;
 }
 
+/* The typed entries in the form */
 .data-entry {
   float: left;
   padding: 4px 4px;
@@ -268,6 +287,7 @@ label {
     "SHRP" 0;
 }
 
+/* As this button is a part of the form, it is classified as the 'input'. This is the green 'Submit' button at the bottom of the form */
 .form-row > input {
   font-size: 15px;
   height: 40px;
@@ -281,6 +301,7 @@ label {
   font-size: 18px;
 }
 
+/* The red 'Close' button at the bottom of the form. As it is not inherently part of the form itself and rather a manual addition to the div, it is configured slightly differently */
 #close {
   font-size: 15px;
   height: 40px;
@@ -294,6 +315,7 @@ label {
   font-size: 18px;
 }
 
+/* The dev buttons at the bottom left of the page, not intended for final release. Just here to make the marker's life easier. */
 .extraButtons {
   display: flex;
   justify-content: flex-start;
