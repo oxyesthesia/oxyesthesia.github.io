@@ -1,0 +1,60 @@
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+  <link rel="stylesheet" href="https://use.typekit.net/gsv4efj.css">
+  <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+</head>
+
+<body>
+  <h1 id="pageHeading">Florists and Indoor Environmental Quality</h1>
+  <div id="productElement" style="display: flex; align-items: top; gap: 10px">
+    <br>
+    <div id="productImage">
+      <img src="SAMBA_FADP.png" alt="SAMBA Device" style="width:700px">
+    </div>
+    <div id="productText" style="text-align: left; padding-left: 2%; padding-right: 2%">
+      <p>
+        Lots of commercial plants are grown externally under strict environmental conditions in order to create not only the most visually 
+        appealing flora, but also a high-yielding batch of product. These strict conditions are often not maintained when these products are 
+        delivered to florists for wholesale, and as a result there is a risk to their vitality and longevity.
+      </p>
+      <p id="quote">"Among the several techniques available to increase shelf life and storage of cut flowers, the appropriate control of temperature, 
+        relative humidity, and atmospheric composition are the most important ones"
+      <span class="popup">Fernandes, L., Casal, S., Pereira, J. A., Saraiva, J. A., & Ramalhosa, E. (2019). An Overview on the Market of Edible Flowers. 
+        Food Reviews International, 36(3), 258–275. <a href="https://doi.org/10.1080/87559129.2019.1639727" target="_blank">DOI</a></span>
+      </p>
+      <p>
+        With SAMBA, florists can track the environmental quality of their stores and ensure that their stock is thriving in a maintained and 
+        hospitable environment. Measuring standard flora factors such as temperature, humidity, light level and CO₂ enables florists to 
+        fine-tune their shopfronts to cater to their flowers and plants in a simple and accurate manner. 
+      </p>
+      <p>
+        SAMBA has been tracking the indoor environmental quality (IEQ) of independent florists throughout an entire calendar year, so that you 
+        can see how accurate and significant this data is to have at your disposal. You can see below how this data compares to a variety of 
+        flora by comparing recorded data with that plant's average requirements, and seeing how often our florist stores are correctly caring
+        for their flora.
+      </p>
+    </div>
+    <br>
+  </div>
+  <div id="graphUpper">
+    <br>
+    <p class="mainHeading">Are Florist Stores Habitable for our Flora?</p>
+    <p style="text-align: center; font-size: large"><em>Play with the data using the buttons below and see how often our flora's basic needs 
+      are not being catered for in these commercial spaces.</em><p>
+    <div id="graphTopElement" style="display: flex; align-items: flex-end; gap: 10px;">
+      <div id="floraImage" style="flex: 1; padding-left: 2%; padding-right: 2%; display: flex; justify-content: flex-end;">
+        <img id="flowerImage" src="Anthurium.jpg" alt="Anthurium" style="width: 500px; height: 300px;  object-fit: cover; align-self: baseline;">
+      </div>
+      <div id="percentGraph" style="width: 50%; height: 350px;">
+      </div>
+    </div>
+  </div>
+  <div id="masterGraph" style="margin: auto; height: 350px;">
+  </div>
+  <div id="footer">
+    <button class="button", onclick="scrollToTop()">Back to Top</button>
+  </div>
+  <script src="script.js"></script>
+</body>

@@ -1,0 +1,132 @@
+body {
+    margin: auto;
+    /* background-color: #efffe7; */
+    background-image: linear-gradient(to bottom left, #efffe7, #9bc686);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+#pageHeading {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0;
+    font-family: "omnes-pro", sans-serif;
+    font-size: 70;
+    text-align: center;
+    color: #D6FEA1;
+    background-color: #1F594D;
+}
+
+#productElement {
+    align-items: center;
+    background-color: #eafae5;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
+    padding-bottom: 3%;
+}
+
+#productText {
+    text-align: left;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    color: #1F594D;
+}
+
+#quote {
+    position: relative;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 22;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#quote:hover .popup {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    visibility: hidden;
+    opacity: 0;
+    width: 300px;
+    background-color: #1F594D;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1000;
+    top: 80%;
+    right: 0;
+    transition: opacity 0.3s ease;
+    font-size: 12;
+    font-weight: 400;
+    line-height: 1.4em;
+    pointer-events: none;
+}
+
+#graphUpper {
+    background-color: #1F594D;
+    color: #ffffff;
+}
+
+.mainHeading {
+    font-family: "omnes-pro", sans-serif;
+    text-align: center;
+    color: #D6FEA1;
+    font-size: 50;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#graphTopElement {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 1%;
+}
+
+#flowerImage {
+    margin-bottom: 4%;
+    border-radius: 40px;
+    border: 10px solid #D6FEA1;
+}
+
+#percentGraph {
+  margin: 0;
+  padding: 0;
+}
+
+#masterGraph {
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #eafae5;
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    background-color: #1F594D;
+    padding-left: 5%;
+    padding-right: 5%;
+    color: #D6FEA1;
+}
+
+.modebar {
+  display: none !important;
+}
+
+.button {
+    background-color: #1F594D;
+    color: #D6FEA1;
+    border: none;
+    padding: 25px 10px;
+    font-family: "omnes-pro", sans-serif;
+    font-size: 20;
+    text-align: center;
+}
